@@ -38,6 +38,7 @@
     ]
   },
   "devDependencies": {
+    "axios": "^0.21.1",
     "styled-components": "^5.2.3",
     "styled-reset": "^4.3.4"
   }
