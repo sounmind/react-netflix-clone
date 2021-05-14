@@ -21,7 +21,9 @@ export const moviesApi = {
   search: (term) =>
     api.get("search/movie", {
       params: {
-        query: encodeURIComponent(term), // TODO: 필요하지 않을 수도 있대!
+        // 특수문자를 처리할 때 encode 필요
+        query: encodeURIComponent(term),
+        // TODO: 현재는 axios에서 알아서 encode해주는 듯. 한글 검색할 때 이렇게 하면 이슈가 있다고 함
       },
     }),
 };
