@@ -12,6 +12,7 @@ export default class extends React.Component {
     error: null,
   };
 
+  // 텍스트를 입력하고 엔터를 누를 때
   handleSubmit = () => {
     const { searchTerm } = this.state;
     if (searchTerm !== "") {

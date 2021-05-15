@@ -45,5 +45,8 @@
     - 프레젠터는 값을 보여주기만 한다. 그저 함수형 컴포넌트.
 
 
+  - Detail Container를 구현할 때 알아야 할 것들
+    - Detail을 위한 URL 정보를 받아들이도록 구현할 때, Components/Header.js에 Link를 추가할 필요는 없다. 왜? default로 react-router-dom의 withRouter가 모든 정보를 Route들에게 prop의 형태로 줄 것이다.
+
   </div>
 </details>
