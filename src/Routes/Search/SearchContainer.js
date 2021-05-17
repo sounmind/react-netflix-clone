@@ -13,11 +13,16 @@ export default class extends React.Component {
   };
 
   // 텍스트를 입력하고 엔터를 누를 때
-  handleSubmit = () => {
+  handleSubmit = (event) => {
+    event.preventDefault();
+
     const { searchTerm } = this.state;
     if (searchTerm !== "") {
       this.searchByTerm();
     }
+  };
+  updateTerm = ({ target: { value } }) => {
+    this.setState({ searchTerm: value });
   };
 
   searchByTerm = async () => {
@@ -51,6 +56,7 @@ export default class extends React.Component {
         loading={loading}
         error={error}
         handleSubmit={this.handleSubmit}
+        updateTerm={this.updateTerm}
       />
     );
   }
