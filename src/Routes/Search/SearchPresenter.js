@@ -4,6 +4,7 @@ import styled from "styled-components";
 import Loader from "Components/Loader";
 import Section from "Components/Section";
 import Message from "Components/Message";
+import Poster from "Components/Poster";
 
 const Container = styled.div`
   padding: 0px 20px;
@@ -44,15 +45,30 @@ const SearchPresenter = ({
         {movieResults && movieResults.length > 0 && (
           <Section title="Movie Results">
             {movieResults.map((movie) => (
-              <span key={movie.id}>{movie.title}</span>
+              <Poster
+                title={movie.original_title}
+                imageUrl={movie.poster_path}
+                isMovie={true}
+                rating={movie.vote_average}
+                year={movie.release_date?.split("-")[0]}
+                id={movie.id}
+                key={movie.id}
+              ></Poster>
             ))}
           </Section>
         )}
-        {console.log(movieResults, tvResults)}
         {tvResults && tvResults.length > 0 && (
           <Section title="TV Results">
             {tvResults.map((show) => (
-              <span key={show.id}>{show.name}</span>
+              <Poster
+                title={show.original_name}
+                imageUrl={show.poster_path}
+                isshow={true}
+                rating={show.vote_average}
+                year={show.first_air_date?.split("-")[0]}
+                id={show.id}
+                key={show.id}
+              ></Poster>
             ))}
           </Section>
         )}
