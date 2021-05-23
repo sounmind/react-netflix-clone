@@ -22,7 +22,7 @@
     "deploy": "gh-pages -d build",
     "predeploy": "npm run build"
   },
-  "homepage": "https://sounmind.github.io/react-netflix-clone/",
+  "homepage": "https://sounmind-netflix-clone.netlify.app/",
   "eslintConfig": {
     "extends": [
       "react-app",
