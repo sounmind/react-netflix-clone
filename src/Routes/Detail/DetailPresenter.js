@@ -3,8 +3,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import Loader from "Components/Loader";
 import Helmet from "react-helmet";
-import { withRouter, Link, Route } from "react-router-dom";
-import { moviesApi } from "api";
+import { withRouter } from "react-router-dom";
 
 const Container = styled.div`
   height: 100vh;
