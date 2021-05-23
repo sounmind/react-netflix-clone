@@ -178,7 +178,7 @@ const DetailPresenter = withRouter(
                     <Video
                       height="150"
                       width="300"
-                      src={`https://www.youtube.com/embed/${videoInfo.id}`}
+                      src={`https://www.youtube.com/embed/${videoInfo.key}`}
                       title="YouTube video player"
                       frameborder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
