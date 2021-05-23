@@ -1,4 +1,4 @@
-# netflix clone
+# netflix clone -> [GO TO WEB PAGE](https://sounmind-netflix-clone.netlify.app/)
 
 ## Screens
 
